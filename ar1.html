@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manu AR.JS project</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.3.1/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene embedded arjs="trackingMethod: best;">
+        <a-marker preset="hiro">
+            <!-- Animated 3D model of a dancing robot -->
+            <a-entity
+                gltf-model="url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf)"
+                scale="0.8 0.5 0.8"
+                animation="180 0 0"
+            ></a-entity>
+        </a-marker>
+
+        <!-- If you want a camera, you can add it here -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
